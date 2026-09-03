@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — AI Automations Built by Ordex Digital</title>
+<meta name="description" content="Working AI automations built with n8n and OpenAI: voice agent, customer support agent, lead qualification, email assistant and a social content pipeline.">
+<meta property="og:title" content="Projects — AI Automations Built by Ordex Digital">
+<meta property="og:description" content="Working AI automations built with n8n and OpenAI: voice agent, customer support agent, lead qualification, email assistant and a social content pipeline.">
+<meta property="og:image" content="assets/img/ordex-mark.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/ordex-mark.png">
+<link rel="canonical" href="projects.html">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="projects">
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Ordex Digital — home">
+      <span class="brand__mark"><img src="assets/img/ordex-mark.png" alt="Ordex Digital logo"></span>
+      <span class="brand__type">
+        <span class="brand__name">Ordex</span>
+        <span class="brand__sub">digital</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="blogs.html" data-nav="blogs">Blogs</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+
+    <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--primary btn--sm nav__cta" data-wa="Hello Ordex Digital, I would like to book a free consultation and discuss my project.">Book a free call</a>
+
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a class="drawer__link" href="index.html" data-nav="home">Home</a>
+  <a class="drawer__link" href="about.html" data-nav="about">About</a>
+  <a class="drawer__link" href="services.html" data-nav="services">Services</a>
+  <a class="drawer__link" href="projects.html" data-nav="projects">Projects</a>
+  <a class="drawer__link" href="blogs.html" data-nav="blogs">Blogs</a>
+  <a class="drawer__link" href="contact.html" data-nav="contact">Contact</a>
+  <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--primary btn--full" data-wa="Hello Ordex Digital, I would like to book a free consultation and discuss my project.">Book a free call on WhatsApp</a>
+  <div class="drawer__foot">WhatsApp <span data-wa-number>0303 3696969</span></div>
+</div>
+
+<main>
+
+<section class="page-head">
+  <div class="shell">
+    <svg class="arc" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4a16 16 0 0 0 0 32" fill="none" stroke="#1E7BEF" stroke-width="5" stroke-linecap="round"/><path d="M20 8a12 12 0 0 1 0 24" fill="none" stroke="#4FD8D2" stroke-width="5" stroke-linecap="round"/></svg>
+    <h1>Automations we've built, end to end.</h1>
+    <p class="lead">Automations built in n8n — a trigger, an AI step that understands the input, structured output the rest of the flow can rely on, and actions that finish the job — alongside ecommerce store design and build work. The screenshots are the actual projects.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="shell">
+    <div class="filters" role="group" aria-label="Filter projects by category">
+      <button class="filter" data-filter="all" aria-pressed="true">All projects</button>
+      <button class="filter" data-filter="ai-automation" aria-pressed="false">AI Automation</button>
+      <button class="filter" data-filter="ai-agents" aria-pressed="false">AI Agents</button>
+      <button class="filter" data-filter="workflow" aria-pressed="false">Workflow Automation</button>
+      <button class="filter" data-filter="ecommerce" aria-pressed="false">Ecommerce</button>
+    </div>
+
+    <div class="empty" id="filterEmpty" hidden>
+      <p>No published build in this category yet — the work in progress isn't shareable. Tell us what you need here and we'll walk you through how we'd approach it.</p>
+      <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa btn--sm" data-wa="Hello Ordex Digital, I would like to discuss a project in this area.">Ask about this area</a>
+    </div>
+
+    <!-- ===== PROJECT: VOICE AGENT ===== -->
+    <article class="case reveal" id="voice-agent" data-category="ai-agents">
+      <div class="case__shot">
+        <img src="assets/img/project-voice-agent.jpg" alt="n8n workflow: webhook receives a call, Whisper converts speech to text, OpenAI understands intent and generates a response, text to speech converts it back to voice, the call is logged in Google Sheets and played back to the caller" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">AI Agents · Voice</span>
+        <h2>AI Voice Agent</h2>
+        <p class="lead">A phone agent that answers incoming calls in natural conversation, understands what the caller wants, replies in a generated voice and logs the whole exchange.</p>
+
+        <div class="flow">
+          <b>Webhook: call in</b><i></i><b>Whisper: speech to text</b><i></i><b>OpenAI: intent + response</b><i></i><b>Structured output</b><i></i><b>Text to speech</b><i></i><b>Google Sheets log</b><i></i><b>Voice back to caller</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>The problem</h4>
+            <p class="muted">Calls arrive outside working hours and during busy periods. Missed calls mean missed enquiries, and the ones that are answered rarely get recorded in a way anyone can search later.</p>
+            <h4>The solution</h4>
+            <p class="muted" style="margin-bottom:0">The workflow receives the call through a webhook, transcribes the caller with Whisper, sends the transcript to an OpenAI chat model that returns the intent, a confidence score, a spoken response and a next action. The response is converted to audio with a text-to-speech voice and played back to the caller, while the call detail is appended to a Google Sheet.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Speech-to-text transcription of every call</li>
+              <li>Intent detection with a confidence score and language field</li>
+              <li>Human-sounding responses generated per call</li>
+              <li>Next action decided in the flow, such as scheduling a call</li>
+              <li>Automatic call log with timestamp, caller, intent, duration and status</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Whisper</span><span>Azure Text-to-Speech</span><span>Twilio</span><span>Google Sheets</span><span>Webhooks</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">AI receptionist, appointment booking, sales qualification on the phone, and after-hours support — with call tracking that stays searchable.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in building an AI Voice Agent for my business.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== PROJECT: CUSTOMER SUPPORT ===== -->
+    <article class="case reveal" id="customer-support" data-category="ai-agents ai-automation">
+      <div class="case__shot">
+        <img src="assets/img/project-customer-support.jpg" alt="n8n workflow: webhook receives a support question, data is cleaned, OpenAI answers it, the structured result is parsed, the conversation is saved to Google Sheets, a reply is emailed and the team is notified in Slack" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">AI Agents · Support</span>
+        <h2>AI Customer Support Agent</h2>
+        <p class="lead">A support agent that takes questions from a website or chat widget, answers them from the knowledge base, emails the customer and keeps the team informed.</p>
+
+        <div class="flow">
+          <b>Webhook: /support</b><i></i><b>Clean data</b><i></i><b>OpenAI: answer</b><i></i><b>Structured output</b><i></i><b>Save conversation</b><i></i><b>Gmail reply</b><i></i><b>Slack notification</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>The problem</h4>
+            <p class="muted">The same integration and how-to questions arrive every day. Each one waits for a team member, gets answered slightly differently, and then disappears from the record.</p>
+            <h4>The solution</h4>
+            <p class="muted" style="margin-bottom:0">Questions come in through a webhook and are cleaned into a consistent shape. An OpenAI model classifies the intent and category, writes a step-by-step answer, returns a confidence score and cites the source documents it drew on. The answer is emailed back through Gmail, the full conversation is written to Google Sheets, and a Slack message tells the team what was asked and how confidently it was answered.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Intent and category classification on every question</li>
+              <li>Answers grounded in your own documentation with sources listed</li>
+              <li>Confidence score, so weak answers can be escalated</li>
+              <li>Conversation history stored in one searchable sheet</li>
+              <li>Slack alert with a direct link to the record</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Google Sheets</span><span>Gmail</span><span>Slack</span><span>Webhooks</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">SaaS platforms, ecommerce stores, service businesses and agencies handling a steady stream of repeat questions.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in an AI Customer Support Agent for my business.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== PROJECT: LEAD QUALIFICATION ===== -->
+    <article class="case reveal" id="lead-qualification" data-category="workflow ai-automation">
+      <div class="case__shot">
+        <img src="assets/img/project-lead-qualification.jpg" alt="n8n workflow: lead form webhook, data formatting, OpenAI scoring, JSON parsing, append to Google Sheets and send an email alert for hot leads" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">Workflow Automation · Sales</span>
+        <h2>AI Lead Qualification</h2>
+        <p class="lead">Every form submission is scored, summarised and filed automatically, so sales spends its time on the leads that are actually ready.</p>
+
+        <div class="flow">
+          <b>Webhook: /lead-form</b><i></i><b>Format data</b><i></i><b>OpenAI: score &amp; summarise</b><i></i><b>JSON parser</b><i></i><b>Append to sheet</b><i></i><b>Email alert</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>The problem</h4>
+            <p class="muted">Leads land in a form inbox with no priority attached. Someone has to read each one, guess how serious it is, and remember to follow up — usually hours later.</p>
+            <h4>The solution</h4>
+            <p class="muted" style="margin-bottom:0">The form posts straight into the workflow. The data is formatted, then an OpenAI model returns a lead status of hot, warm or cold, a numeric score, the business type, the stated requirement, the budget range, a short summary and a recommended next action. The parsed result is appended to a Google Sheet, and hot leads trigger an immediate email alert with everything the salesperson needs.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Hot / warm / cold status plus a 0–100 score on every lead</li>
+              <li>Requirement and budget extracted from free-text answers</li>
+              <li>Recommended action written for the sales team</li>
+              <li>Central lead sheet with timestamp, company and status</li>
+              <li>Instant email alert on high-scoring leads only</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Webhooks</span><span>Google Sheets</span><span>Gmail</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">Agencies, B2B services and any team where enquiry volume is higher than the time available to read every one carefully.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in an AI Lead Qualification system.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== PROJECT: EMAIL ASSISTANT ===== -->
+    <article class="case reveal" id="email-assistant" data-category="ai-automation workflow">
+      <div class="case__shot">
+        <img src="assets/img/project-email-assistant.jpg" alt="n8n workflow: Gmail trigger on new email, OpenAI analysis, structured output, priority check, urgent or standard auto reply, and a record saved to Google Sheets" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">AI Automation · Email</span>
+        <h2>AI Email Assistant</h2>
+        <p class="lead">An assistant that reads incoming mail as it arrives, decides how urgent it is, replies on the right path and keeps a record of everything.</p>
+
+        <div class="flow">
+          <b>Gmail trigger</b><i></i><b>OpenAI: analyse</b><i></i><b>Structured output</b><i></i><b>Priority check</b><i></i><b>Urgent or standard reply</b><i></i><b>Google Sheets record</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>The problem</h4>
+            <p class="muted">An inbox mixes urgent client questions with routine ones. Sorting them by hand takes attention all day, and the important message is often the one that waits longest.</p>
+            <h4>The solution</h4>
+            <p class="muted" style="margin-bottom:0">A Gmail trigger picks up each new email and passes it to an OpenAI model, which returns the intent, category, priority, confidence and a one-line summary. A conditional step splits high-priority mail from everything else: urgent messages get an immediate reply on their own path, the rest receive a helpful auto-reply. Either way the email and its outcome are written to Google Sheets.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Automatic intent, category and priority detection</li>
+              <li>Separate handling paths for urgent and standard mail</li>
+              <li>Context-aware replies rather than a single canned message</li>
+              <li>Every email logged with date, sender, subject and status</li>
+              <li>Runs continuously, including outside working hours</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Gmail</span><span>Google Sheets</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">Business owners, support teams, freelancers — anyone whose inbox is the main queue of incoming work.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in an AI Email Assistant for my business.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== PROJECT: SOCIAL CONTENT ===== -->
+    <article class="case reveal" id="social-content" data-category="ai-automation">
+      <div class="case__shot">
+        <img src="assets/img/project-social-content.jpg" alt="n8n workflow: daily schedule trigger, topic input, OpenAI content generation, JSON parsing, save to Google Sheets, Canva image creation, then posting to LinkedIn and Instagram" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">AI Automation · Marketing</span>
+        <h2>AI Social Media Content Pipeline</h2>
+        <p class="lead">A daily pipeline that writes the post, generates the image and publishes to LinkedIn and Instagram — with every piece of content recorded in a content calendar.</p>
+
+        <div class="flow">
+          <b>Daily 09:00 trigger</b><i></i><b>Topic input</b><i></i><b>OpenAI: caption + hashtags</b><i></i><b>Structured output</b><i></i><b>Content calendar</b><i></i><b>Canva image</b><i></i><b>LinkedIn + Instagram</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>The problem</h4>
+            <p class="muted">Publishing consistently is a daily chore: think of a topic, write the caption, make an image, post it in two places, then remember what went out and when.</p>
+            <h4>The solution</h4>
+            <p class="muted" style="margin-bottom:0">A schedule trigger fires each morning with a topic, tone and target platforms. An OpenAI model returns a title, caption and hashtag set formatted for each network. The parsed content is appended to a Google Sheets content calendar, an image is generated in Canva, and the post is published to LinkedIn and Instagram with the record updated to posted.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Scheduled daily content creation with no manual step</li>
+              <li>Captions and hashtags adapted per platform</li>
+              <li>Automatic image generation for each post</li>
+              <li>Content calendar with date, platform, status and link</li>
+              <li>Publishing to multiple channels from one run</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Canva</span><span>Google Sheets</span><span>LinkedIn</span><span>Instagram</span><span>Gmail</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">Digital marketing agencies, ecommerce brands, SaaS companies, founders and creators building a personal brand.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in an AI Social Media Content Automation.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ===== PROJECT: VORAX SHOPIFY STORE ===== -->
+    <article class="case reveal" id="vorax-shopify" data-category="ecommerce">
+      <div class="case__shot">
+        <img src="assets/img/project-vorax-shopify.jpg" alt="VORAX storefront: announcement bar, navigation with shop and collections menus, full-width hero with a New Arrivals headline and Shop Now button, and a trust bar covering shipping, returns, payment and quality" loading="lazy">
+      </div>
+      <div class="case__body">
+        <span class="post__cat">Ecommerce · Store Design &amp; Development</span>
+        <h2>Shopify Men's Fashion Store Design &amp; Development</h2>
+        <p class="lead">A complete modern Shopify storefront designed and built for VORAX, a men's fashion brand focused on premium everyday clothing and accessories.</p>
+
+        <div class="flow">
+          <b>Brand direction</b><i></i><b>Store structure</b><i></i><b>Theme design</b><i></i><b>Product &amp; collection pages</b><i></i><b>Checkout flow</b>
+        </div>
+
+        <div class="case__grid">
+          <div>
+            <h4>Overview</h4>
+            <p class="muted">VORAX needed a storefront that matched the price point of the product. The design brief was a clean, premium aesthetic that establishes a clear brand identity and carries a customer smoothly from the first impression through product discovery to checkout.</p>
+            <h4>The approach</h4>
+            <p class="muted" style="margin-bottom:0">The store was built around a dark, editorial layout with generous space and a single warm accent for calls to action, so the product photography stays the loudest thing on the page. Navigation was structured so a visitor can reach a category in one move, and the reassurance a first-time buyer looks for — shipping, returns, payment security — sits directly under the hero rather than buried in the footer.</p>
+          </div>
+          <div>
+            <h4>Key features</h4>
+            <ul class="ticks">
+              <li>Full-width hero with a single clear call to action into the catalogue</li>
+              <li>Announcement bar carrying the free shipping threshold on every page</li>
+              <li>Sticky navigation with shop and collections dropdowns for fast browsing</li>
+              <li>Search, account and cart always within reach in the header</li>
+              <li>Trust bar covering shipping, returns, secure checkout and product quality</li>
+              <li>Collection and product page layouts built for a growing catalogue</li>
+              <li>Responsive design that holds its structure on phones and tablets</li>
+              <li>A consistent visual identity carried from the homepage to checkout</li>
+            </ul>
+            <h4>Built with</h4>
+            <div class="stack"><span>Shopify</span><span>Theme design</span><span>Store setup</span><span>Responsive UI</span></div>
+            <h4>Where it fits</h4>
+            <p class="muted" style="margin-bottom:0">Fashion, apparel and accessory brands launching or relaunching on Shopify; direct-to-consumer stores that need the storefront to look as considered as the product; and any retailer replacing a generic theme with a design that carries its own brand identity.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa" data-wa="Hello Ordex Digital, I am interested in a Shopify store design and development project.">Build something like this</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="shell">
+    <div class="cta-band reveal">
+      <h2>Your process could be next.</h2>
+      <p>Send us the workflow that takes the most time in your week and we'll map out how it would run automatically.</p>
+      <div class="btn-row">
+        <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--primary" data-wa="Hello Ordex Digital, I would like to book a free consultation and discuss my project.">Book a free call on WhatsApp</a>
+        <a class="btn btn--ghost" href="services.html">Explore our services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/img/ordex-mark.png" alt="Ordex Digital logo">
+          <span class="brand__type"><span class="brand__name">Ordex</span><span class="brand__sub">digital</span></span>
+        </div>
+        <p>Helping businesses automate, innovate and scale with intelligent AI solutions.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/ordex-digital/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4V9Z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#ai-automation">AI Automation</a></li>
+          <li><a href="services.html#ai-agents">AI Agents</a></li>
+          <li><a href="services.html#workflow-automation">Workflow Automation</a></li>
+          <li><a href="services.html#ecommerce-automation">Ecommerce Automation</a></li>
+          <li><a href="services.html#cloud-architecture">Cloud Architecture</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p style="margin-bottom:6px">WhatsApp / Phone</p>
+        <p style="color:var(--white); font-family:var(--font-display); font-size:1.15rem" data-wa-number>0303 3696969</p>
+        <p style="margin-bottom:6px">Email</p>
+        <p style="margin-bottom:18px"><a href="mailto:Uzair@ordexdigital.com" style="color:var(--teal)">Uzair@ordexdigital.com</a></p>
+        <p>Let's discuss your next project.</p>
+        <a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="btn btn--wa btn--sm" data-wa="Hello Ordex Digital, I would like to discuss a project.">Chat on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <span>© <span data-year>2026</span> Ordex Digital. All rights reserved.</span>
+      <span>Automate. Innovate. Elevate.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923033696969" target="_blank" rel="noopener" class="wa-float" data-wa="Hello Ordex Digital, I would like to discuss a project." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.42 1.32-1.95 1.36-.5.05-.96.24-3.23-.67-2.72-1.07-4.44-3.85-4.57-4.03-.13-.18-1.09-1.45-1.09-2.76 0-1.32.69-1.96.94-2.23a.98.98 0 0 1 .71-.33c.18 0 .35 0 .51.01.16.01.38-.06.6.46.23.55.77 1.9.84 2.04.07.14.11.3.02.48-.09.18-.13.29-.26.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.15.27.67 1.1 1.43 1.78.98.87 1.8 1.14 2.07 1.27.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.35-.22.6-.13.24.09 1.58.75 1.85.88.27.13.45.2.51.31.07.11.07.64-.16 1.32Z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
